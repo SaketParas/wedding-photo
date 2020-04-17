@@ -1,0 +1,124 @@
+.App {
+  text-align: center;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+    "title title"
+    "header header"
+    "sidebar sidebar"
+    "content content"
+    "footer footer";
+}
+.title{
+  grid-area: title;
+}
+.header{
+  grid-area: header;
+}
+.sidebar{
+  grid-area: sidebar;
+}
+.content{
+  grid-area: content;
+  justify-self: center;
+}
+.footer{
+  grid-area: footer;
+}
+
+
+.grid div:nth-child(even){
+  background-color:   red;
+  /* padding: 1px; */
+}
+.grid div:nth-child(odd){
+  background-color:   green;
+}
+
+@media screen and (min-width: 736px)
+{
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 500px 500px 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+      ". title title ."
+      ". header header ."
+      ". sidebar content ."
+      ". sidebar footer .";
+  }
+}
+
+.grid_img {
+  display: grid;
+  margin-left: 40px;
+  grid-template-columns: 200px 100px;
+  grid-template-rows: 190px 190px 190px 400px 200px 200px 200px 200px 200px;
+  grid-template-areas: 
+    "one ."
+    "two ."
+    "ten eleven"
+    "three nine"
+    "four ."
+    "six ."
+    "five twelve"
+    "eight ."
+    "seven thirteen";
+}
+.one{
+  grid-area: one;
+}
+.ten{
+  grid-area: ten;
+}
+.two{
+  grid-area: two;
+}
+.three{
+  grid-area: three;
+}
+.four{
+  grid-area: four;
+}
+.eleven{
+  grid-area: eleven;
+}
+.five{
+  grid-area: five;
+}
+.six{
+  grid-area: six;
+}
+.twelve{
+  grid-area: twelve;
+}
+.nine{
+  grid-area: nine;
+}
+.eight{
+  grid-area: eight;
+}
+.thirteen{
+  grid-area: thirteen;
+}
+.seven{
+  grid-area: seven;
+}
+
+@media screen and (min-width: 736px)
+{
+  .grid_img {
+    display: grid;
+    grid-template-columns: 200px 240px 200px 190px 120px;
+    grid-template-rows: 200px 210px 200px 250px;
+    padding: 0px;
+    grid-template-areas: 
+      "one . ten two ."
+      "three four . eleven five "
+      ". six . twelve nine"
+      "seven eight . thirteen .";
+  }
+}
